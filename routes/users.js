@@ -9,7 +9,7 @@ var insertSubscriber = function(db, callback, req, res) {
 
 /* GET users listing. */
 router.post('/subscribe', function(req, res) {
-  var url = process.env.MONGODB_IP;
+  var url = 'mongodb://localhost:27017/esirom';
   MongoClient.connect(url, function(err, db) {
     assert.equal(null, err);
     console.log("Connected correctly to server.");
